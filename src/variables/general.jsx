@@ -3,19 +3,20 @@
 // #############################
 
 var bugs = [
-  'Sign contract for "What are conference organizers afraid of?"',
-  "Lines From Great Russian Literature? Or E-mails From My Boss?",
-  "Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit",
-  "Create 4 Invisible User Experiences you Never Knew About"
+  '38254 - Power Stop LLC: [RMA/Stopwatch] Stopwatch Tracker',
+  "38359 - Power Stop LLC: [Tickets/Summary] - Reply Email Via comment",
+  "38194 - Redstone Capital: [Lead/field = Lead Status] Do not Delete Lead after",
+  "38426 - Project Pilot: CKeditor does not save all data"
 ];
 var website = [
-  "Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit",
-  'Sign contract for "What are conference organizers afraid of?"'
+  "38325 - Redstone Capital: [Duplicate Check ] User Interface",
+  '38477 - BTTW Warranty: [Push to Prod] Prep for push to prod'
 ];
 var server = [
-  "Lines From Great Russian Literature? Or E-mails From My Boss?",
-  "Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit",
-  'Sign contract for "What are conference organizers afraid of?"'
+  '38463 - Monolithic Power Systems, Inc.: [Server Upgrade] Upgrade Monolithic CRMTEST server',
+  "38406 - H2Ocean, Inc.: [Vtiger Build Duplicate] Client would like to duplicate their live code but reset record data",
+  "38403 - Vertical LLC: [Authorize.Net/Push to Prod] Push auth.net code to prod",
+  '38464 - Power Stop LLC: [RMA/FedEx] Change the FedEx API from Development to production'
 ];
 
 module.exports = {
