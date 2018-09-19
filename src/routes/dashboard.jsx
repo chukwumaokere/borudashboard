@@ -11,6 +11,9 @@ import Notifications from "@material-ui/icons/Notifications";
 import DashboardPage from "views/Dashboard/Dashboard.jsx";
 import UserProfile from "views/UserProfile/UserProfile.jsx";
 import TableList from "views/TableList/TableList.jsx";
+import Monthly from "views/Monthly/Monthly.jsx";
+import Docs from "views/Docs/Docs.jsx";
+import Reports from "views/Reports/Reports.jsx";
 import Typography from "views/Typography/Typography.jsx";
 import Icons from "views/Icons/Icons.jsx";
 import Maps from "views/Maps/Maps.jsx";
@@ -26,25 +29,25 @@ const dashboardRoutes = [
     component: DashboardPage
   },
   {
-    path: "/table",
+    path: "/monthly",
     sidebarName: "Monthly Dashboard",
     navbarName: "Monthly Dashboard",
     icon: "calendar_today",
-    component: TableList
+    component: Monthly
   },
   {
-    path: "/typography",
+    path: "/reports",
     sidebarName: "Reports",
     navbarName: "Reports",
     icon: "content_paste",
-    component: Typography
+    component: Reports 
   },
   {
-    path: "/icons",
+    path: "/docs",
     sidebarName: "Documentation",
     navbarName: "Documentation",
     icon: LibraryBooks, //BubbleChart
-    component: Icons
+    component: Docs
   },
   {
     path: "/maps",
