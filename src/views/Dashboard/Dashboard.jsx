@@ -35,7 +35,8 @@ import { bugs, website, server } from "variables/general";
 import {
   dailySalesChart,
   emailsSubscriptionChart,
-  completedTasksChart
+  completedTasksChart,
+  dailyHoursPie
 } from "variables/charts";
 
 import dashboardStyle from "assets/jss/material-dashboard-react/views/dashboardStyle.jsx";
@@ -138,32 +139,34 @@ class Dashboard extends React.Component {
           </GridItem>
         </GridContainer>
         <GridContainer>
-<GridItem xs={12} sm={12} md={12}>
+	  <GridItem xs={12} sm={12} md={4}>
             <Card chart>
-              <CardHeader color="warning">
+              <CardHeader color="info">
                 <ChartistGraph
                   className="ct-chart"
-                  data={emailsSubscriptionChart.data}
-                  type="Bar"
-                  options={emailsSubscriptionChart.options}
-                  responsiveOptions={emailsSubscriptionChart.responsiveOptions}
-                  listener={emailsSubscriptionChart.animation}
+                  data={dailyHoursPie.data}
+                  type="Pie"
+                  options={dailyHoursPie.options}
+                  listener={dailySalesChart.animation}
                 />
               </CardHeader>
               <CardBody>
-                <h4 className={classes.cardTitle}>Hours Spent (daily)</h4>
+                <h4 className={classes.cardTitle}>Task Summary (Total: 133.37 hrs)</h4>
                 <p className={classes.cardCategory}>
-                  Hours worked by employee
+                  <span className={classes.successText}>
+                    <ArrowUpward className={classes.upArrowCardCategory} /> 12%
+                  </span>{" "}
+                  increase in billable work from yesterday.
                 </p>
               </CardBody>
               <CardFooter chart>
                 <div className={classes.stats}>
-                  <AccessTime /> updated at 7:00am Central Time
+                  <AccessTime /> updated 3 hours ago
                 </div>
               </CardFooter>
             </Card>
           </GridItem>
-          <GridItem xs={12} sm={12} md={6}>
+          <GridItem xs={12} sm={12} md={4}>
             <Card chart>
               <CardHeader color="success">
                 <ChartistGraph
@@ -190,7 +193,7 @@ class Dashboard extends React.Component {
               </CardFooter>
             </Card>
           </GridItem>
-          <GridItem xs={12} sm={12} md={6}>
+          <GridItem xs={12} sm={12} md={4}>
             <Card chart>
               <CardHeader color="danger">
                 <ChartistGraph
@@ -214,6 +217,33 @@ class Dashboard extends React.Component {
               </CardFooter>
             </Card>
           </GridItem>
+
+	<GridItem xs={12} sm={12} md={12}>
+            <Card chart>
+              <CardHeader color="warning">
+                <ChartistGraph
+                  className="ct-chart"
+                  data={emailsSubscriptionChart.data}
+                  type="Bar"
+                  options={emailsSubscriptionChart.options}
+                  responsiveOptions={emailsSubscriptionChart.responsiveOptions}
+                  listener={emailsSubscriptionChart.animation}
+                />
+              </CardHeader>
+              <CardBody>
+                <h4 className={classes.cardTitle}>Hours Spent (daily)</h4>
+                <p className={classes.cardCategory}>
+                  Hours worked by employee
+                </p>
+              </CardBody>
+              <CardFooter chart>
+                <div className={classes.stats}>
+                  <AccessTime /> updated at 7:00am Central Time
+                </div>
+              </CardFooter>
+            </Card>
+          </GridItem>
+
         </GridContainer>
         <GridContainer>
           <GridItem xs={12} sm={12} md={6}>

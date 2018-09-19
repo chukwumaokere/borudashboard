@@ -92,9 +92,14 @@ const emailsSubscriptionChart = {
       "David",
       "Tuyen",
     ],
-    series: [[7.5, 7.43, 9.6, 9.5, 9.5, 9.4, 18, 9.5, 11, 6, 6, 2, 6.5, 7.2, 7, 7.0, 7.5, 7.5, 7.8]]
+    series: [
+	[7.0, 7.43, 2.6, 5.5, 2.5, 3.4, 3, 3.5, 2.0, 6, 6, 6, 6.5, 7.2, 7, 7.0, 7.5, 7.5, 7.8],
+	[0.0, 0.00, 4.6, 2.5, 5.5, 3.4, 8, 3.5, 6.0, 0, 0, 0, 0.0, 0.0, 0, 0.0, 0.0, 0.0, 0.0],
+	[0.0, 0.00, 2.0, 2.0, 2.0, 3.0, 7, 3.0, 3.0, 0, 0, 0, 0.0, 0.0, 0, 0.0, 0.0, 0.0, 0.0]
+	]
   },
   options: {
+    stackBars: true,
     axisX: {
       showGrid: false
     },
@@ -189,9 +194,26 @@ const completedTasksChart = {
     }
   }
 };
+// new Chartist.Bar('.ct-chart', data, options, responsiveOptions);
+var data = { 
+	//labels: ['Billable', 'Unbillable', 'Internal'], 
+	series: [1, 3, 8] 
+};
+
+var sum = function(a, b) { return a + b };
+
+const dailyHoursPie = {
+	data,
+	options: {
+		labelInterpolationFnc: function(value) {
+    			return Math.round(value / data.series.reduce(sum) * 100) + '%';
+		 }	
+	},
+};
 
 module.exports = {
   dailySalesChart,
   emailsSubscriptionChart,
-  completedTasksChart
+  completedTasksChart,
+  dailyHoursPie
 };
