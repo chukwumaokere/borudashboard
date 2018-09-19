@@ -109,8 +109,8 @@ class Dashboard extends React.Component {
                 <CardIcon color="danger">
                   <Icon>info_outline</Icon>
                 </CardIcon>
-                <p className={classes.cardCategory}>Open Tasks Daily</p>
-                <h3 className={classes.cardTitle}>35</h3>
+                <p className={classes.cardCategory}>Open Tasks (daily)</p>
+                <h3 className={classes.cardTitle}>7</h3>
               </CardHeader>
               <CardFooter stats>
                 <div className={classes.stats}>
@@ -205,7 +205,7 @@ class Dashboard extends React.Component {
                 />
               </CardHeader>
               <CardBody>
-                <h4 className={classes.cardTitle}>Completed Tasks</h4>
+                <h4 className={classes.cardTitle}>Completed Tasks (hourly)</h4>
                 <p className={classes.cardCategory}>
                   Last Campaign Performance
                 </p>
