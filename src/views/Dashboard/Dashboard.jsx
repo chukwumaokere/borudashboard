@@ -126,8 +126,8 @@ class Dashboard extends React.Component {
                 <CardIcon color="info">
                   <Accessibility />
                 </CardIcon>
-                <p className={classes.cardCategory}>New Clients (since yesterday)</p>
-                <h3 className={classes.cardTitle}>+3</h3>
+                <p className={classes.cardCategory}>New Tasks Created (daily)</p>
+                <h3 className={classes.cardTitle}>+9</h3>
               </CardHeader>
               <CardFooter stats>
                 <div className={classes.stats}>
