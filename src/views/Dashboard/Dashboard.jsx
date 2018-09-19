@@ -245,6 +245,33 @@ class Dashboard extends React.Component {
           </GridItem>
 
         </GridContainer>
+	<GridContainer>
+	<GridItem xs={12} sm={12} md={12}>
+        <Card>
+          <CardHeader color="info">
+            <h4 className={classes.cardTitleWhite}>Daily Report Summary (daily)</h4>
+            <p className={classes.cardCategoryWhite}>
+              Your Time Performance for the follow tasks are as follows
+            </p>
+          </CardHeader>
+          <CardBody>
+            <Table
+              tableHeaderColor="info"
+              tableHead={[<b>Company</b>, <b>Project</b>, <b>Task</b>, <b>Duration</b>, <b>Billing Code</b>]}
+              tableData={[
+                ["Project Administrative Tasks", "Goals", "Goal Dev", "1.09", "Unbillable"],
+                ["Redstone Capital", "Misc Tasks", "[DocX] Backwards compatibility", "1.23", "Billable"],
+                ["Power Stop LLC", "Ticket System to Replace SFcom/Desk", "[Tickets/Listview] - Set up Colorizer", "0.13", "Billable"],
+                ["Project Administrative Tasks", "Administrative Tasks", "Break", "0.97", "Unbillable"],
+                ["Inner Courage", "Profile Builder", "Confirm Field Mapping from Old Live site to New Dev Site", "8.11", "Billable"],
+                ["Project Pilot", "Task Tracker", "[Dashboard]", "1.00", "Unbillable"],
+		[<b>TOTAL</b>, "", "", <b>12.53</b>, "",]
+              ]}
+            />
+          </CardBody>
+        </Card>
+      </GridItem>
+	</GridContainer>
         <GridContainer>
           <GridItem xs={12} sm={12} md={6}>
             <CustomTabs
