@@ -32,6 +32,8 @@ import CardFooter from "components/Card/CardFooter.jsx";
 
 import { bugs, website, server } from "variables/general";
 
+import { dailyHours, thisdata } from "variables/dashboards";
+
 import {
   dailySalesChart,
   emailsSubscriptionChart,
@@ -66,7 +68,7 @@ class Dashboard extends React.Component {
                 </CardIcon>
                 <p className={classes.cardCategory}>Total Hours Worked (daily)</p>
                 <h3 className={classes.cardTitle}>
-                  133.37 <small>HOURS</small>
+                  {thisdata} <small>HOURS</small>
                 </h3>
               </CardHeader>
               <CardFooter stats>
