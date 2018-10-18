@@ -35,7 +35,8 @@ function getTotalHours(){
 }*/
 //var thisdata = getTotalHours();
 
-var getData = async () => {
+/*
+const getData = async () => {
         const data = await https.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY', (resp) => {
                   let data = '';
 
@@ -47,14 +48,32 @@ var getData = async () => {
                   // The whole response has been received. Print out the result.
                   resp.on('end', () => {
                     console.log(JSON.parse(data).explanation);
-                   return JSON.parse(data).explanation;
+                   //return JSON.parse(data).explanation;
                   });
 
                 }).on("error", (err) => {
                   console.log("Error: " + err.message);
                 });
-        return data;
+       // return data;
 }
+*/
+const data = https.get('https://core.boruapps.com/modules/chart/dataChart.php?task_type=3%2C7%2C-1' , (resp) => {
+                  let data = '';
+
+                  // A chunk of data has been recieved.
+                  resp.on('data', (chunk) => {
+                    data += chunk;
+                  });
+
+                  // The whole response has been received. Print out the result.
+                  resp.on('end', () => {
+                    console.log(JSON.parse(data).elements[0].values);
+                  });
+
+                }).on("error", (err) => {
+                  console.log("Error: " + err.message);
+                });
+
 
 var thisdata = 'K';
 var totaltasks = '';
